@@ -13,7 +13,7 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "css-loader": "^6.5.1",
+    "css-loader": "^6.5.1", 
     "html-webpack-plugin": "^5.5.0",
     "sass": "^1.49.0",
     "sass-loader": "^12.4.0",
