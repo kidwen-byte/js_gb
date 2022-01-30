@@ -13,8 +13,20 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "css-loader": "^6.5.1",
     "html-webpack-plugin": "^5.5.0",
-    "webpack": "^5.65.0",
+    "sass": "^1.49.0",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.67.0",
     "webpack-cli": "^4.9.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kidwen-byte/js_gb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kidwen-byte/js_gb/issues"
+  },
+  "homepage": "https://github.com/kidwen-byte/js_gb#readme"
 }

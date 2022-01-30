@@ -18,4 +18,13 @@ module.exports = {
           filename: 'index.html', // название выходного файла
       }),
     ],
-}
+
+    module: {
+      rules: [
+        {
+          test: /\.css$/i,
+          use: ["style-loader", "css-loader"],
+        },
+      ],
+    },
+};

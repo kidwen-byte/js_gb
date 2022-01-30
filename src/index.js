@@ -1,6 +1,8 @@
+import css from "./style.css";
 import getProductList from "./mock/data.js";
 import renderGoodsList from "./showcase.js";
 
-const productList = getProductList(20);
+
+const productList = getProductList(20); 
 
 renderGoodsList(productList);
