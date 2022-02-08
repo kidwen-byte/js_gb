@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input {
+        width: 400px;
+    }
+</style>
+
+<body>
+    <form action="">
+        <input type="text" name="name" placeholder="Ваше имя">
+        <input type="text" name="email" placeholder="Ваш E-mail" id="email">
+        <input type="text" name="tel" placeholder="Ваш номер телефона" id="tel">
+        <input type="button" class="button" value="Отправить">
+    </form>
+</body>
+
+<script>
+
+    const emailReg = /([a-z0-9_\.-]+)@([a-z0-9_\.-]+)\.([a-z\.]{2,6})/gi;
+    const telReg = /([0-9]{6,20})/gi;
+
+    let button = document.querySelector('.button');
+    button.addEventListener("click", validation);
+
+    function error(params) {
+        if (params == 'email') {
+            return ('Формат E-mail должен быть email@example.com');
+        } else if (params == 'tel') {
+            return ('Формат телефона должен быть 89999999999');
+        } else {
+            return ('Все сломалось, досвидание');
+        }
+
+    }
+
+    function validation() {
+
+        let email = document.getElementsByName('email');
+        let tel = document.getElementsByName('tel');
+
+        let sucsses = {
+            "email": emailReg.test(email[0].value),
+            "tel": telReg.test(tel[0].value)
+        }
+
+        for (let key in sucsses) {
+            if (sucsses[key] == false) {
+                document.getElementById(key).value = error(key);
+            } 
+        }
+    }
+
+</script>
+
+</html>
